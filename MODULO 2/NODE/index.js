@@ -7,3 +7,4 @@ repository.createActivity("Jugar al futbol","es divertido con amigos","https://m
 repository.createActivity("Salir a bailar","para despejarse","https://www.udance.es/wp-content/uploads/2016/09/043-Open-Hour-17012016-1024x684.jpg")
 
 console.log(repository.getAllActivities());
+

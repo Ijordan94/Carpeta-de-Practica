@@ -1,0 +1,15 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "Ignacio Jordan Coria",
+  "license": "ISC",
+  "description": "Demo de JEST",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
