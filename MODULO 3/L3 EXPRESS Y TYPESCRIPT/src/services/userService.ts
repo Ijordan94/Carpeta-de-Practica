@@ -1,11 +1,21 @@
+import { isUint16Array } from "util/types";
 import IUser from "../interfaces/IUser";
 import IUserDTO from "../interfaces/UserDTO";
 
-const users: IUser[] = [];
+let users: IUser[] = [
+  {
+    id: 0,
+    name: "Juan",
+    email: "juan",
+    active: true,
+  },
+];
 
-let id: number = 0;
+let id: number = 1;
 
-export const getUsersService = async () => {};
+export const getUsersService = async (): Promise<IUser[]> => {
+  return users;
+};
 
 export const createUserService = async (userData: IUserDTO): Promise<IUser> => {
   //recibir los datos el usuario
@@ -23,4 +33,8 @@ export const createUserService = async (userData: IUserDTO): Promise<IUser> => {
   return newUser;
 };
 
-export const deleteUserService = async () => {};
+export const deleteUserService = async (id: number): Promise<void> => {
+  users = users.filter((user: IUser) => {
+    return user.id !== id;
+  });
+};
